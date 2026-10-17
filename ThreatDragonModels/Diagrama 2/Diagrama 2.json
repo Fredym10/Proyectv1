@@ -48,9 +48,9 @@
                 "c84fb7eb-7a04-4287-b7ff-5817fa474df0",
                 "81c78f02-1d77-419f-b3c3-65c239bd0f02",
                 "0de0de46-3ff4-4849-84e6-e70359c44952",
-                "bf77d200-b2cb-429f-8896-bad936f622b2",
                 "323f5983-5e17-425c-a90b-2776c48f33c3",
-                "1725f54d-069b-4790-b509-4fc3e65242da"
+                "1725f54d-069b-4790-b509-4fc3e65242da",
+                "bf77d200-b2cb-429f-8896-bad936f622b2"
               ],
               "containedElements": [
                 "4272481d-c16a-4291-b3bf-ebc2abfe50ac",
@@ -141,8 +141,8 @@
                 "text": "P2 \nPanel Admin\nReact"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -239,7 +239,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -257,13 +257,26 @@
                   "new": false,
                   "number": 5,
                   "score": ""
+                },
+                {
+                  "id": "5e7c96df-ae31-462a-9f66-4d73f39b405a",
+                  "title": "AM-11",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "JWT almacenado en localStorage: robo de sesión ante un XSS.",
+                  "mitigation": "Abierto",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "spoofing": 0,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 0,
+                "informationDisclosure": 1,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 1
               }
@@ -386,7 +399,29 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "62831685-089e-42f9-8da3-7d13d96f8ac8",
+                  "title": "AM-06",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Suplantación de remitente: el de del mensaje se tomaba del cliente, no del JWT.",
+                  "mitigation": "Remediado (NFR-04, Hito 0)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -529,13 +564,6 @@
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -552,8 +580,8 @@
                 "text": "P3\nAPI Backend\nNode/Express"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -650,7 +678,7 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -694,13 +722,65 @@
                   "new": false,
                   "number": 4,
                   "score": ""
+                },
+                {
+                  "id": "4821b4b7-c21a-4bf6-88c4-6a9e99a6b376",
+                  "title": "AM-07",
+                  "status": "Mitigated",
+                  "severity": "Medium",
+                  "type": "Spoofing / Spoofing",
+                  "description": "OTP sin límite de intentos ni expiración: fuerza bruta y enumeración.",
+                  "mitigation": "Remediado (NFR-08, Hito 0)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                },
+                {
+                  "id": "5fc53b54-c3f0-420a-a5f2-65ed0716c73b",
+                  "title": "AM-09",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering / Manipulación",
+                  "description": "Webhook de pago de membresías sin verificación de firma ni idempotencia.",
+                  "mitigation": "Abierto (hito futuro)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                },
+                {
+                  "id": "f573721e-fb38-4d68-b328-e7bda284a6de",
+                  "title": "AM-10",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Exposición de datos personales de todos los usuarios a cualquier autenticado.",
+                  "mitigation": "Abierto",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                },
+                {
+                  "id": "dc4fe9b8-ce92-46c6-bc67-b5aff2befbd2",
+                  "title": "AM-14",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering / Manipulación",
+                  "description": "Imágenes recibidas en base64 sin validar formato ni tamaño (asignación masiva).",
+                  "mitigation": "Abierto",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
-                "spoofing": 0,
-                "tampering": 1,
+                "spoofing": 2,
+                "tampering": 3,
                 "repudiation": 0,
-                "informationDisclosure": 0,
+                "informationDisclosure": 1,
                 "denialOfService": 1,
                 "elevationOfPrivilege": 1
               }
@@ -1071,11 +1151,13 @@
                 "text": "D2 archivos\n(DPI, fotos, comprobantes)"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1172,13 +1254,33 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "a0d588f2-628b-4833-979d-16c7aa21e3b2",
+                  "title": "AM-13",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Comprobantes y documentos de identidad sin control de acceso robusto ni cifrado en reposo.",
+                  "mitigation": "Parcial",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1195,11 +1297,13 @@
                 "text": "D1 MongoDB\n(usuarios, viajes, pagos, OTP, mensajes)"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1296,13 +1400,46 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "fb6e2931-a077-4b27-8825-8305cba8696d",
+                  "title": "AM-08",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Credenciales de base de datos y correo expuestas en .env y JWT_KEY débil.",
+                  "mitigation": "En ejecución (NFR-07)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                },
+                {
+                  "id": "a348c939-5dc6-4cee-af53-3c7383252345",
+                  "title": "AM-15",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering / Manipulación",
+                  "description": "Validación de entrada insuficiente: riesgo de inyección NoSQL.",
+                  "mitigation": "Parcial",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1613,60 +1750,6 @@
               "cell": "aae30e20-f9ce-45ca-bb55-2bf54900899b",
               "port": "4ff93363-d0c4-4b5a-a333-ac8a5b891efb"
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "REST (JWT)",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "e06b137f-b42f-43e9-bea4-ab6b805367b0"
-              ]
-            },
-            "labels": [
-              "REST (JWT)"
-            ],
-            "id": "bf77d200-b2cb-429f-8896-bad936f622b2",
-            "source": {
-              "x": 380,
-              "y": 185
-            },
-            "target": {
-              "cell": "810c4df3-33a4-4916-8d0a-cf25c255afc9",
-              "port": "4ff93363-d0c4-4b5a-a333-ac8a5b891efb"
-            },
-            "vertices": [
-              {
-                "x": 500,
-                "y": 260
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -2077,6 +2160,80 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "REST (JWT)",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "61e7761e-7ad6-498d-9836-7ec4a6b28bb0",
+                  "title": "AM-12",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Ausencia de registro de auditoría: no se puede probar quién hizo qué.",
+                  "mitigation": "Abierto",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "e06b137f-b42f-43e9-bea4-ab6b805367b0"
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "REST (JWT)"
+            ],
+            "id": "bf77d200-b2cb-429f-8896-bad936f622b2",
+            "source": {
+              "x": 380,
+              "y": 185
+            },
+            "target": {
+              "cell": "810c4df3-33a4-4916-8d0a-cf25c255afc9",
+              "port": "4ff93363-d0c4-4b5a-a333-ac8a5b891efb"
+            },
+            "vertices": [
+              {
+                "x": 500,
+                "y": 260
+              }
+            ]
+          },
+          {
             "position": {
               "x": 960,
               "y": 348
@@ -2456,6 +2613,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 6
+    "threatTop": 16
   }
 }
