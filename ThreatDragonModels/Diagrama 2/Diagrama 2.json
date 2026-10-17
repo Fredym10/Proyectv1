@@ -84,6 +84,38 @@
           },
           {
             "position": {
+              "x": 34.25,
+              "y": 10
+            },
+            "size": {
+              "width": 150,
+              "height": 320
+            },
+            "attrs": {
+              "label": {
+                "text": "      Usuarios"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "73b0d1d2-d734-4599-b7d8-ae784c906785",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "      Usuarios",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": [
+                "bfd427f8-2584-42b0-bbe0-2325dc5c321d",
+                "838ba024-195b-4bd9-ba28-dc30d5de6649",
+                "1bbc8296-ddee-4261-b506-0f2a8c40fd42"
+              ]
+            }
+          },
+          {
+            "position": {
               "x": 620,
               "y": 40
             },
