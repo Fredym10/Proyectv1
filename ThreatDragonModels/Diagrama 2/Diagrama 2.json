@@ -35,8 +35,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "e06b137f-b42f-43e9-bea4-ab6b805367b0",
             "zIndex": -1,
+            "id": "e06b137f-b42f-43e9-bea4-ab6b805367b0",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "                                                                        Frontera de confianza - Plataforma T_App",
@@ -73,8 +73,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "9a4edd84-e561-470e-9ed1-57379afa1df8",
             "zIndex": -1,
+            "id": "9a4edd84-e561-470e-9ed1-57379afa1df8",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "",
@@ -111,8 +111,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "73b0d1d2-d734-4599-b7d8-ae784c906785",
             "zIndex": -1,
+            "id": "73b0d1d2-d734-4599-b7d8-ae784c906785",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "      Usuarios",
@@ -148,6 +148,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -231,7 +232,6 @@
               ]
             },
             "id": "4272481d-c16a-4291-b3bf-ebc2abfe50ac",
-            "zIndex": 1,
             "data": {
               "type": "tm.Process",
               "name": "P2 \nPanel Admin\nReact",
@@ -244,7 +244,29 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "2ee9b7f7-4cc5-454c-822e-3387a449a2fc",
+                  "title": "AM-04",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Elevation of privilege / Elevación de privilegios",
+                  "description": "Panel sin guarda de sesión: las vistas cargaban sin validar sesión ni rol.",
+                  "mitigation": "Remediado (NFR-05, Hito 0)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -268,6 +290,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -351,7 +374,6 @@
               ]
             },
             "id": "aae30e20-f9ce-45ca-bb55-2bf54900899b",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "P4 \nSocket.IO",
@@ -388,6 +410,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -471,7 +494,6 @@
               ]
             },
             "id": "9889da6d-cc95-4806-a210-24a0139c12b1",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "P1 \nApp Movil\nFlutter",
@@ -484,7 +506,36 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "b6b7dab9-cd06-4c6a-88ae-9d2b3e6e6cdf",
+                  "title": "AM-05",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Clave de Google Maps embebida en el código/binario de iOS (extraíble).",
+                  "mitigation": "Remediado (NFR-06, Hito 0)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -508,6 +559,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -591,7 +643,6 @@
               ]
             },
             "id": "810c4df3-33a4-4916-8d0a-cf25c255afc9",
-            "zIndex": 4,
             "data": {
               "type": "tm.Process",
               "name": "P3\nAPI Backend\nNode/Express",
@@ -604,7 +655,55 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "cd80c4f4-15b7-4b14-91c8-655dfd753043",
+                  "title": "AM-01",
+                  "status": "Mitigated",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege / Elevación de privilegios",
+                  "description": "Escalación de privilegios: el rol se tomaba del cuerpo de la petición; un externo podía crearse como administrador.",
+                  "mitigation": "Remediado (NFR-01, Hito 0)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "310337a0-5e6b-4837-9dea-ec5a84d4cb44",
+                  "title": "AM-02",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering / Manipulación",
+                  "description": "IDOR: cualquier usuario autenticado podía alterar viajes de terceros conociendo su ID.",
+                  "mitigation": "Remediado (NFR-02, Hito 0)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "567dbbbe-3a7f-411c-985b-0712e8700782",
+                  "title": "AM-03",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Denial of service / Denegación de servicio",
+                  "description": "Límite de payload de 5000 MB: agotamiento de memoria por cuerpos muy grandes.",
+                  "mitigation": "Remediado (NFR-03, Hito 0)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -628,6 +727,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -711,7 +811,6 @@
               ]
             },
             "id": "bfd427f8-2584-42b0-bbe0-2325dc5c321d",
-            "zIndex": 5,
             "data": {
               "type": "tm.Actor",
               "name": "Administrador\n(Navegador)",
@@ -745,6 +844,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -828,7 +928,6 @@
               ]
             },
             "id": "838ba024-195b-4bd9-ba28-dc30d5de6649",
-            "zIndex": 6,
             "data": {
               "type": "tm.Actor",
               "name": "Conductor\n(App)",
@@ -862,6 +961,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -945,7 +1045,6 @@
               ]
             },
             "id": "1bbc8296-ddee-4261-b506-0f2a8c40fd42",
-            "zIndex": 7,
             "data": {
               "type": "tm.Actor",
               "name": "Pasajero \n(App)",
@@ -982,6 +1081,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 8,
             "ports": {
               "groups": {
                 "top": {
@@ -1065,7 +1165,6 @@
               ]
             },
             "id": "b3b69d96-e0b4-4970-aec4-4d42aadb021d",
-            "zIndex": 8,
             "data": {
               "type": "tm.Store",
               "name": "D2 archivos\n(DPI, fotos, comprobantes)",
@@ -1106,6 +1205,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 9,
             "ports": {
               "groups": {
                 "top": {
@@ -1189,7 +1289,6 @@
               ]
             },
             "id": "3ec2369e-a57e-4516-b4a3-e49c3fd697a7",
-            "zIndex": 9,
             "data": {
               "type": "tm.Store",
               "name": "D1 MongoDB\n(usuarios, viajes, pagos, OTP, mensajes)",
@@ -1227,6 +1326,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 10,
             "ports": {
               "groups": {
                 "top": {
@@ -1310,7 +1410,6 @@
               ]
             },
             "id": "217610f7-58e1-4525-a8c1-e5479b02d1ad",
-            "zIndex": 10,
             "data": {
               "type": "tm.Actor",
               "name": "Proveedor de \ncorreo",
@@ -1998,6 +2097,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -2081,7 +2181,6 @@
               ]
             },
             "id": "9c00b3b1-d37c-43ec-a4f5-417a9a1ec8b2",
-            "zIndex": 11,
             "data": {
               "type": "tm.Actor",
               "name": "NEONET",
@@ -2115,6 +2214,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -2198,7 +2298,6 @@
               ]
             },
             "id": "c3104acd-56ee-4c2f-905c-576206ca641e",
-            "zIndex": 12,
             "data": {
               "type": "tm.Actor",
               "name": "Google / FB \nOAuth",
@@ -2232,6 +2331,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -2315,7 +2415,6 @@
               ]
             },
             "id": "3551e4f8-10ed-49f2-8372-24307527c0bb",
-            "zIndex": 13,
             "data": {
               "type": "tm.Actor",
               "name": "Google Maps / \nMap Box",
@@ -2344,8 +2443,8 @@
             },
             "visible": true,
             "shape": "td-text-block",
-            "id": "6e2ba943-da0f-4497-9063-ac305273be49",
             "zIndex": 14,
+            "id": "6e2ba943-da0f-4497-9063-ac305273be49",
             "data": {
               "type": "tm.Text",
               "name": "Servicios de terceros",
@@ -2357,6 +2456,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 1
+    "threatTop": 6
   }
 }
