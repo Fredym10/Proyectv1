@@ -1209,6 +1209,162 @@
                   "name": "block"
                 },
                 "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Reportes, conductores",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Reportes, conductores"
+            ],
+            "id": "d7618658-843f-4c4b-8a68-9951e2f518ca",
+            "source": {
+              "x": 754,
+              "y": 225
+            },
+            "target": {
+              "cell": "5b305c79-8f27-499d-b7f7-1dbb9acc6089",
+              "port": "10e60d29-2796-41fe-89f5-4f49766a7eb4"
+            },
+            "vertices": [
+              {
+                "x": 840,
+                "y": 170
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Acepat viaje, membresía",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Acepat viaje, membresía"
+            ],
+            "id": "27e84f94-4b8d-47dc-a9aa-848e24d4415f",
+            "source": {
+              "x": 946,
+              "y": 60
+            },
+            "target": {
+              "cell": "6b775b09-19b4-417a-8359-ab0a4acd0ce1",
+              "port": "e34dbd8a-9650-45f5-8d0a-dde440192d52"
+            },
+            "vertices": [
+              {
+                "x": 810,
+                "y": 110
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Aprobaciones",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Aprobaciones"
+            ],
+            "id": "06439f1a-16f5-402d-9fa5-96f9ce74f7fa",
+            "source": {
+              "cell": "5b305c79-8f27-499d-b7f7-1dbb9acc6089",
+              "port": "7a1b86eb-981b-42c2-b229-b6205f1f789c"
+            },
+            "target": {
+              "cell": "6b775b09-19b4-417a-8359-ab0a4acd0ce1",
+              "port": "7c8f4eee-a9ae-4f81-a9d0-97cebedb8507"
+            },
+            "vertices": [
+              {
+                "x": 860,
+                "y": 210
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
                   "name": "block"
                 },
                 "strokeDasharray": null
@@ -1245,6 +1401,58 @@
               "cell": "7d775405-b028-4695-987b-e1973e8e3c65",
               "port": "10e60d29-2796-41fe-89f5-4f49766a7eb4"
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Solicitudes, ubicación ",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Solicitudes, ubicación "
+            ],
+            "id": "98fbb0ab-a54c-487c-8859-775971aad179",
+            "source": {
+              "x": 696,
+              "y": 190
+            },
+            "target": {
+              "cell": "f55863b2-8675-4a09-894d-38ab08da84d2",
+              "port": "58a15fde-7886-4afd-9cba-8f67dce711be"
+            },
+            "vertices": [
+              {
+                "x": 800,
+                "y": 30
+              }
+            ]
           }
         ]
       }
