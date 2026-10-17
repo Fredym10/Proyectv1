@@ -40,6 +40,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -123,7 +124,6 @@
               ]
             },
             "id": "6b775b09-19b4-417a-8359-ab0a4acd0ce1",
-            "zIndex": 1,
             "data": {
               "type": "tm.Process",
               "name": "Plataforma T_App\n(sistema)",
@@ -160,6 +160,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -243,7 +244,6 @@
               ]
             },
             "id": "962128e3-d6ff-479a-b906-d5acc6b42b3a",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "Pasajero",
@@ -266,6 +266,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Piloto"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -274,6 +277,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -357,10 +361,9 @@
               ]
             },
             "id": "f55863b2-8675-4a09-894d-38ab08da84d2",
-            "zIndex": 3,
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
+              "name": "Piloto",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -380,6 +383,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Administrador"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -388,6 +394,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -471,10 +478,9 @@
               ]
             },
             "id": "5b305c79-8f27-499d-b7f7-1dbb9acc6089",
-            "zIndex": 4,
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
+              "name": "Administrador",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -494,6 +500,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Google / \nFacebook OAuth"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -502,6 +511,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -585,10 +595,9 @@
               ]
             },
             "id": "7d775405-b028-4695-987b-e1973e8e3c65",
-            "zIndex": 5,
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
+              "name": "Google / \nFacebook OAuth",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -608,6 +617,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Google Maps /\nMap Box"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -616,6 +628,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -699,10 +712,9 @@
               ]
             },
             "id": "5e329941-d3f4-48e8-a5f6-7ad8603de97f",
-            "zIndex": 6,
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
+              "name": "Google Maps /\nMap Box",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -722,6 +734,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Proveedor de \ncorreo (OTP)"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -730,6 +745,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -813,10 +829,9 @@
               ]
             },
             "id": "fcaf8b17-aca9-4215-93c5-0f6afc92e6b9",
-            "zIndex": 7,
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
+              "name": "Proveedor de \ncorreo (OTP)",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -836,6 +851,9 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "Pasarela de pago\n(NEONET)"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -844,6 +862,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 8,
             "ports": {
               "groups": {
                 "top": {
@@ -927,10 +946,9 @@
               ]
             },
             "id": "2b8fdc60-d78a-4354-82bd-97d9715828a7",
-            "zIndex": 8,
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
+              "name": "Pasarela de pago\n(NEONET)",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -1006,7 +1024,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "viaje, ubicación, chat",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1020,7 +1038,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "viaje, ubicación, chat"
             ],
             "id": "972fa775-a661-4b2e-a63f-75156196cfa2",
             "source": {
@@ -1028,8 +1046,8 @@
               "y": 320
             },
             "target": {
-              "x": 793,
-              "y": 420
+              "cell": "962128e3-d6ff-479a-b906-d5acc6b42b3a",
+              "port": "7a1b86eb-981b-42c2-b229-b6205f1f789c"
             }
           }
         ]
