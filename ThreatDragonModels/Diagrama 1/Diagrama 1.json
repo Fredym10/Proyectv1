@@ -150,7 +150,7 @@
             },
             "attrs": {
               "text": {
-                "text": "Pasajero"
+                "text": "Pasajer"
               },
               "body": {
                 "stroke": "#333333",
@@ -254,13 +254,6 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1013,7 +1006,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Viaje, ubicación, chat",
+              "name": "Data Flow",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1027,16 +1020,16 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Viaje, ubicación, chat"
+              "Data Flow"
             ],
-            "id": "204492b2-87c9-4726-8a04-dbaefc42fd33",
+            "id": "972fa775-a661-4b2e-a63f-75156196cfa2",
             "source": {
-              "x": 664,
+              "x": 693,
               "y": 320
             },
             "target": {
-              "cell": "962128e3-d6ff-479a-b906-d5acc6b42b3a",
-              "port": "7a1b86eb-981b-42c2-b229-b6205f1f789c"
+              "x": 793,
+              "y": 420
             }
           }
         ]
