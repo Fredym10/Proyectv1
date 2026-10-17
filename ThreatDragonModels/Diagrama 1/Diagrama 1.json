@@ -1048,6 +1048,202 @@
             "target": {
               "cell": "962128e3-d6ff-479a-b906-d5acc6b42b3a",
               "port": "7a1b86eb-981b-42c2-b229-b6205f1f789c"
+            },
+            "vertices": [
+              {
+                "x": 540,
+                "y": 340
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Cobro membresía",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Cobro membresía"
+            ],
+            "id": "714628ed-54f9-4215-8aff-cf334ce32d2f",
+            "source": {
+              "cell": "6b775b09-19b4-417a-8359-ab0a4acd0ce1",
+              "port": "1f2e0b3d-7b62-4661-b75c-28236bb176c3"
+            },
+            "target": {
+              "cell": "2b8fdc60-d78a-4354-82bd-97d9715828a7",
+              "port": "10e60d29-2796-41fe-89f5-4f49766a7eb4"
+            },
+            "vertices": [
+              {
+                "x": 800,
+                "y": 440
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Envia OTP",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Envia OTP"
+            ],
+            "id": "a68b7752-2520-4dbf-b86f-91b2797fef96",
+            "source": {
+              "x": 730,
+              "y": 310
+            },
+            "target": {
+              "cell": "fcaf8b17-aca9-4215-93c5-0f6afc92e6b9",
+              "port": "10e60d29-2796-41fe-89f5-4f49766a7eb4"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Mapas, rutas",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Mapas, rutas"
+            ],
+            "id": "1b90f01b-e60d-4499-8aba-14aec563ff31",
+            "source": {
+              "x": 748,
+              "y": 295
+            },
+            "target": {
+              "cell": "5e329941-d3f4-48e8-a5f6-7ad8603de97f",
+              "port": "10e60d29-2796-41fe-89f5-4f49766a7eb4"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": "block"
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Verifica idToken",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": true,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Verifica idToken"
+            ],
+            "id": "8c3bd0c4-c8b0-4864-96e2-ee7dddda9b70",
+            "source": {
+              "x": 759,
+              "y": 270
+            },
+            "target": {
+              "cell": "7d775405-b028-4695-987b-e1973e8e3c65",
+              "port": "10e60d29-2796-41fe-89f5-4f49766a7eb4"
             }
           }
         ]
